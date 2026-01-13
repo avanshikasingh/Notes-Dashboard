@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "4071a5da-2dcd-4b11-af52-a197c8b9124b",
+		"name": "Notes Dashboard API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43969112",
+		"_collection_link": "https://avanshikasingh.postman.co/workspace/53e19c69-f6fe-4cad-8458-460c84ac342b/collection/43969112-4071a5da-2dcd-4b11-af52-a197c8b9124b?action=share&source=collection_link&creator=43969112"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Test User\",\r\n  \"email\": \"test1@gmail.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test1@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjIyMTczNWQwMGI2NzkzNjhiYWFjMiIsImlhdCI6MTc2ODMwMjMyOCwiZXhwIjoxNzY4Mzg4NzI4fQ.wKdm0OX3cMlo_TBGOcuCVtdadxBTQUP_aisEZ-5xekY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Notes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjIyMTczNWQwMGI2NzkzNjhiYWFjMiIsImlhdCI6MTc2ODMwMjMyOCwiZXhwIjoxNzY4Mzg4NzI4fQ.wKdm0OX3cMlo_TBGOcuCVtdadxBTQUP_aisEZ-5xekY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Note",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update Note",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Note",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjIyMTczNWQwMGI2NzkzNjhiYWFjMiIsImlhdCI6MTc2ODMwMjMyOCwiZXhwIjoxNzY4Mzg4NzI4fQ.wKdm0OX3cMlo_TBGOcuCVtdadxBTQUP_aisEZ-5xekY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/notes/696627f9a8c33bbde378cad4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notes",
+						"696627f9a8c33bbde378cad4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
